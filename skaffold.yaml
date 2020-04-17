@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2beta1
+kind: Config
+metadata:
+  name: pod-info-test
+build:
+  artifacts:
+  - image: pod-info-test
+deploy:
+  kubectl:
+    manifests:
+    - pod-info.yaml
